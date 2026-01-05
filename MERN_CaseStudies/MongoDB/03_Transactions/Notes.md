@@ -6,7 +6,6 @@
 
 > [!Note]
 > ##  Why This Setup Was Needed
-
 > MongoDB **multi-document transactions require a replica set**.\
 > A standalone MongoDB server (default Windows service mode) does **not** support transactions.\
 > Therefore, we temporarily:
@@ -47,24 +46,31 @@ At this point, no MongoDB server is running.
    Waiting for connections
    and many warnings
    ```
-  Start session , else if error / see direct
+  Start session , 
+  
+  else if error OR you  see direct
   ```
   C> :...
   ```
   Try technique below 
-  
-## Why `C:\Program Files` Failed (Important Error Handling)
 
-### Error Encountered
+  <br>
 
-```
-WiredTiger.lock: Permission denied
-```
-
-### Root Cause
-  * `C:\Program Files` is a **protected Windows directory**
-  * Manual `mongod` does **not** run with elevated write permissions
-  * WiredTiger requires full read/write access
+---
+> [!Caution]
+> ### Why `C:\Program Files` Failed (Important Error Handling)
+> ### Error Encountered
+> 
+> ```
+> WiredTiger.lock: Permission denied
+> ```
+>
+> ### Root Cause
+>  * `C:\Program Files` is a **protected Windows directory**
+>  * Manual `mongod` does **not** run with elevated write permissions
+>  * WiredTiger requires full read/write access
+>
+---
 
 ### Correct Resolution
 Use a **user-writable directory**:
@@ -78,9 +84,11 @@ This is the **recommended MongoDB practice on Windows**.
 
 You may see a lot of warnings, ignore them 
 
+<br>
+
 ---
 
-## 1. Creating the Data Directory inside C drive
+## 1. Creating the Data Directory inside `C drive`
 
 Manually created:
 
@@ -134,7 +142,7 @@ This connects to the running `mongod` instance.
 
 <br>
 
-## 7. Initializing the Replica Set
+## 4. Initializing the Replica Set
 
 Replica sets require **explicit initialization**.
 
@@ -154,12 +162,11 @@ Confirmed:
 * `stateStr: "PRIMARY"`
 
 At this point:
-
 >  MongoDB supports transactions
 
 <br>
 
-## 4. Database & Collections Setup
+## 5. Database & Collections Setup
 
 ```js
 use fintrust
@@ -179,7 +186,7 @@ db.users.insertMany([
 
 <br>
 
-## 5. Starting a Transaction (Correct Way in mongosh)
+## 6. Starting a Transaction (Correct Way in mongosh)
 
 ### Important mongosh Rule
 
@@ -195,9 +202,9 @@ const txDb = session.getDatabase("fintrust");
 
 <br>
 
-## 6. Transaction Operations (ACID Demonstration)
+## 7. Transaction Operations (ACID Demonstration)
 
-### a Deduct from Alice
+### a. Deduct from Alice
 
 ```js
 txDb.users.updateOne(
@@ -206,7 +213,7 @@ txDb.users.updateOne(
 )
 ```
 
-### b Credit Bob
+### b. Credit Bob
 
 ```js
 txDb.users.updateOne(
@@ -215,7 +222,7 @@ txDb.users.updateOne(
 )
 ```
 
-### c Insert Transaction Log
+### c. Insert Transaction Log
 
 ```js
 txDb.transactions.insertOne({
@@ -230,7 +237,9 @@ txDb.transactions.insertOne({
 
 <br>
 
-## 7 Error Encountered: Transaction Aborted
+---
+
+##  If Error Encountered: Transaction Aborted
 
 ### Error Seen
 
@@ -250,6 +259,8 @@ NoSuchTransaction: Transaction has been aborted
 
 This behavior is **expected and correct**.
 
+---
+
 <br>
 
 ## 8. Committing the Transaction
@@ -265,7 +276,7 @@ After commit:
 
 <br>
 
-## 13. Final Verification (Outside Transaction)
+## 9. Final Verification (Outside Transaction)
 
 ```js
 db.users.find().pretty()
