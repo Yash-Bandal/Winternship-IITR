@@ -6,9 +6,9 @@
 
 1. Find the **average rating for each genre in 2024**, but **only include genres with more than 10,000 total views**.\
 **Output fields:**
-* genre
-* totalViews
-* avgRating (rounded to 1 decimal)
+   * genre
+   * totalViews
+   * avgRating (rounded to 1 decimal)
 
 <br>
 
