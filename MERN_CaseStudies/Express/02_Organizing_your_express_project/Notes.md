@@ -430,15 +430,7 @@ Files in `public/` become accessible at:
 http://localhost:3000/filename
 ```
 
----
 
-## 9. Optional: Controllers and Models
-
-* Controllers handle business logic
-* Models define database schemas
-* Recommended for large, production-grade applications
-
----
 
 ## 10. Step-by-Step Walkthrough
 
@@ -451,7 +443,7 @@ mkdir routes public
 * Move route logic into separate files
 * Keep `app.js` focused on setup only
 
----
+<br>
 
 ### B. Adding and Testing Features
 
@@ -459,14 +451,7 @@ mkdir routes public
 * Add a static file like `logo.png`
 * Access via `http://localhost:3000/logo.png`
 
----
 
-## 11. How This Solves the Community Center’s Problems
-
-* No tangled code
-* Easy feature expansion
-* Safe collaboration
-* Organized static assets
 
 <br>
 
@@ -480,7 +465,7 @@ Inside the `routes/` folder, create a new file:
 routes/contact.js
 ```
 
----
+<br>
 
 ### Step 2: Write the Contact Route
 
@@ -504,7 +489,7 @@ Explanation:
 * `router.get('/')` handles GET requests
 * `res.json()` sends structured response data
 
----
+<br>
 
 ### Step 3: Import the Route in `app.js`
 
@@ -514,7 +499,7 @@ At the top of `app.js`, import the contact router:
 const contactRouter = require('./routes/contact');
 ```
 
----
+<br>
 
 ### Step 4: Mount the Route
 
@@ -529,7 +514,7 @@ This means:
 * `/contact` → handled by `contact.js`
 * `/contact/` → matches `router.get('/')`
 
----
+<br>
 
 ### Step 5: Final `app.js` (Relevant Part)
 
@@ -557,7 +542,7 @@ app.listen(port, () => {
 });
 ```
 
----
+<br>
 
 ### Step 6: Run and Test
 
@@ -577,29 +562,3 @@ You should receive the contact information in JSON format.
 
 <br>
 
-##  Solution (Reference)
-
-### routes/contact.js
-
-```js
-const express = require('express');
-const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.json({
-    email: 'info@greenfieldcenter.org',
-    phone: '555-123-4567'
-  });
-});
-
-module.exports = router;
-```
-
-### app.js
-
-```js
-const contactRouter = require('./routes/contact');
-app.use('/contact', contactRouter);
-```
-
-<br>
