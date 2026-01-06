@@ -239,26 +239,27 @@ txDb.transactions.insertOne({
 
 ---
 
-##  If Error Encountered: Transaction Aborted
-
-### Error Seen
-
-```
-NoSuchTransaction: Transaction has been aborted
-```
-
-### Why This Happened
-* Transactions are **time-bound**
-* Shell inactivity or errors can auto-abort
-* MongoDB aborts to **protect atomicity**
-
-### Correct Handling (Industry Practice)
-1. Abort and discard old transaction
-2. Start a **fresh transaction**
-3. Re-run all steps
-
-This behavior is **expected and correct**.
-
+> [!Tip]
+> ##  If Error Encountered: Transaction Aborted
+>
+> ### Error Seen
+> 
+> ```
+> NoSuchTransaction: Transaction has been aborted
+> ```
+> 
+> ### Why This Happened
+> * Transactions are **time-bound**
+> * Shell inactivity or errors can auto-abort
+> * MongoDB aborts to **protect atomicity**
+> 
+> ### Correct Handling (Industry Practice)
+> 1. Abort and discard old transaction
+> 2. Start a **fresh transaction**
+> 3. Re-run all steps
+> 
+> This behavior is **expected and correct**.
+> 
 ---
 
 <br>
