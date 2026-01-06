@@ -265,9 +265,9 @@ const contactRouter = require('./routes/contact');
 
 app.use(express.json());
 
-app.use('/events', eventsRouter);
+// app.use('/events', eventsRouter);
 app.use('/classes', classesRouter);
-app.use('/contact', contactRouter);
+// app.use('/contact', contactRouter);
 
 app.get('/', (req, res) => {
   res.send('Welcome to Greenfield Community Center!');
