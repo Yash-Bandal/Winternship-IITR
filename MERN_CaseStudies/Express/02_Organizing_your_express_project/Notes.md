@@ -192,6 +192,16 @@ Your Turn!
 
 <br>
 
+```
+greenfield-center/
+│
+├── app.js
+└── routes
+    └── contact.js
+└── package.json
+└── package-lock.json
+```
+
 ## Code
 
 ### Step 1: Create the Route File
@@ -213,7 +223,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.json({
     email: 'info@greenfieldcenter.org',
-    phone: '555-123-4567'
+    phone: '9292929212'
   });
 });
 
