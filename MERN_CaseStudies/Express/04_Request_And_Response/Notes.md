@@ -351,6 +351,7 @@ export default router;
 "points": 200
 }
 ```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/40bf3523-8a7a-448c-985a-8ca961554ca8" />
 
 ### 9.2 Transfer
 
@@ -363,6 +364,7 @@ export default router;
   "points": 200
 }
 ```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/48950dc1-bec8-4892-a233-90bea9c296aa" />
 
 <br>
 
