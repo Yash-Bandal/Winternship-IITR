@@ -1,4 +1,4 @@
-# Routing Controllers – Bakery Case Study=
+# Routing Controllers – Bakery Case Study
 
 ## 1. Project Goal
 
@@ -287,6 +287,10 @@ export class LoggingMiddleware implements ExpressMiddlewareInterface {
 
 ```
 
+
+
+
+
 Used for:
 
 * Request logging
@@ -294,6 +298,11 @@ Used for:
 
 
 
+
+## Run
+```
+ npx ts-node-dev src/server.ts
+```
 
 
 <br>
