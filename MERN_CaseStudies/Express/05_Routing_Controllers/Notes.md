@@ -1,4 +1,4 @@
-# Routing Controllers – Bakery Case Study (Implementation Notes)
+# Routing Controllers – Bakery Case Study=
 
 ## 1. Project Goal
 
