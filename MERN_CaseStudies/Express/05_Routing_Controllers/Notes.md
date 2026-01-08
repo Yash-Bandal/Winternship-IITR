@@ -98,7 +98,17 @@ export interface StoredOrder {
     pickupDate: string;
 }
 
-export const orders: StoredOrder[] = [];
+export const orders: StoredOrder[] = [
+    //sample
+    // {
+    //     "customerName": "Maria",
+    //     "flavor": "vanila",
+    //     "quantity": 1,
+    //     "pickupDate": "2026-02-01"
+    // }
+
+];
+
 
 ```
 
