@@ -9,6 +9,12 @@ Implement a clean Express backend using **routing-controllers** with:
 * Middleware (logging, non-blocking checks)
 * Clear Postman testing flow
 
+
+**Your Turn!**
+- Create a BakingController for /baking routes.
+- Add a POST /baking/start endpoint to start baking an order.
+- Add a GET /baking/status/:id endpoint to check the baking status of an order.
+
 <br>
 
 ## 2. Project Structure
