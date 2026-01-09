@@ -48,7 +48,6 @@ src/
 ## 3. App Bootstrap
 
 ### `app.ts`
-
 * Uses `useExpressServer`
 * Enables validation and body parsing internally
 * No manual `express.json()`
@@ -189,11 +188,10 @@ export class OrderController {
     
     create(@Body() order: Order) {
         
-
+        //Allergy check 
         // if (order.flavor.toLowerCase().includes("peanut")) {
         //     throw new Error("Peanut allergy detected");
         // }
-
 
         const newOrder:StoredOrder = {
             id: String(orders.length + 1),
