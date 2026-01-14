@@ -1,5 +1,19 @@
 # [2. Basic Syntax in TypeScript](https://sudarshansudarshan.github.io/winternship/case-studies/02-basic-syntax-in-typescript/)
 
+
+## Core Idea
+TypeScript syntax defines how clean, readable, and structured code is written.\
+The core idea of this lesson is to understand the rules and building blocks of TypeScript:
+- Variables, functions, classes, and comments
+- Proper naming and structure
+- Clear program flow and organization
+- Mastering syntax ensures code is consistent, professional, and easy to maintain, especially when many developers work on the same codebase.
+
+
+<br>
+
+
+
 ## 2.1 Interactive Challenge / Mini-Project
 
 **Your Turn!**
