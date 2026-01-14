@@ -1,9 +1,19 @@
 # [1. Introduction to TypeScript](https://sudarshansudarshan.github.io/winternship/case-studies/01-introduction-to-typescript/)
 
+
+## Core Idea
+TypeScript is about safety, clarity, and scalability.\
+The core idea of this lesson is that TypeScript adds static typing to JavaScript, allowing developers to:
+- Catch errors before runtime
+- Write self-documenting code
+- Build large, maintainable applications with confidence
+- TypeScript acts as a safety layer over JavaScript, helping teams prevent bugs early and making code easier to understand as projects grow.
+
+<br>
+
 ## 1.1 Interactive Challenge / Mini-Project
 
 **Your Turn!**
-
 * Change the `message` variable to your own name and print a personalized greeting.
 * Declare a variable for your age and print it with a message.
 * Try assigning a number to a variable declared as a `string` and observe what happens.
