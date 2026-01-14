@@ -1,4 +1,4 @@
-# 7. User-Defined Types in TypeScript
+# [7. User-Defined Types in TypeScript](https://sudarshansudarshan.github.io/winternship/case-studies/07-user-defined-types-in-typescript/)
 
 ## 7.1 Lesson Focus (Core Idea)
 
