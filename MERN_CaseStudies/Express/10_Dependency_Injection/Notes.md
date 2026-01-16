@@ -93,17 +93,19 @@ healthcare-di-system/
 
 ## 5. Setup & Configuration
 
-### 5.1 Install Dependencies
-
-```bash
-npm install typedi reflect-metadata
-```
-
 ### Initialize Project
 
 ```bash
 npm init -y
 ```
+
+###  Install Dependencies
+
+```bash
+npm install typedi reflect-metadata
+```
+
+
 
 ### Install Dependencies
 
