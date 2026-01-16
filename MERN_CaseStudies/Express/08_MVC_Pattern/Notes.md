@@ -4,6 +4,35 @@
 
 <br>
 
+<br>
+
+---
+### We built a Library Management API using:
+
+Model
+Book interface defining data shape
+
+**Repository**
+- Handles data storage (InMemoryBookRepository)
+  → No business logic here
+
+**Service**
+- Contains all rules (borrow, return, validations)
+  → “Book already borrowed”, “Book not found”, etc.
+
+**Controlle**r
+- Handles HTTP routes and delegates work to service
+
+**Dependency Injection**
+- Services and controllers receive dependencies instead of creating them
+
+---
+
+
+<br>
+
+
+
 ## 1. Problem Statement
 
 The library system had major issues:
