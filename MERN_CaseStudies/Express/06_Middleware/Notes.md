@@ -3,7 +3,6 @@
 ## 1. Objective
 
 Design and implement a **multi-step hospital discharge workflow** using **Express middleware** to understand:
-
 * What middleware is
 * How middleware chaining works
 * Why order matters
