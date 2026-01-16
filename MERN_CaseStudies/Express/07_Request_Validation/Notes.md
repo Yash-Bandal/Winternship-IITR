@@ -3,6 +3,10 @@
 ## Case Study: BrightFuture University – Admissions API
 
 
+**Main core of the case study**
+
+Stop bad or incomplete applications before they enter the system.
+
 <br>
 
 
