@@ -99,6 +99,51 @@ healthcare-di-system/
 npm install typedi reflect-metadata
 ```
 
+### Initialize Project
+
+```bash
+npm init -y
+```
+
+### Install Dependencies
+
+```bash
+npm install express
+npm install -D typescript ts-node-dev @types/express
+```
+
+### package.json (scripts)
+
+```json
+"scripts": {
+  "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+}
+```
+
+
+<br>
+
+
+
+## TypeScript Configuration
+
+### tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": "src",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
+```
+
 <br>
 
 ### 5.2 Enable Decorators (tsconfig.json)
